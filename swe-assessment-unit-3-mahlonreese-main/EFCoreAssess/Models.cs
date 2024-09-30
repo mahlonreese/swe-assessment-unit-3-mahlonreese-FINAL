@@ -27,6 +27,12 @@ public class Animal
     //instructions said nav prop of Human obj
     [Column("human")]
     public Human Human { get; set; }
+
+    public override string ToString()
+    {
+        return $" AnimalId: {AnimalId} Name: {Name} Species: {AnimalSpecies}";
+    }
+
 }
 
 [Table("humans")]
@@ -51,4 +57,10 @@ public class Human
     //and a list of obj for animal nav prop
     [Column("animal")]
     public List<Animal> Animal { get; set; }
+
+    public override string ToString()
+    {
+        return $" HumanId: {HumanId} fname: {FirstName}";
+    }
+
 }

@@ -1,6 +1,6 @@
 ﻿// Un-comment the lines below to test your code by hand.
 
-Console.WriteLine(Queries.Query1());
+Console.WriteLine(Queries.Query1().ToString());
 
 Console.WriteLine(Queries.Query2());
 

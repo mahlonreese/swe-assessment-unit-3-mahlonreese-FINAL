@@ -141,11 +141,11 @@ public class Queries
         using (var context = new AssessDbContext())
         {
             var animalSpecies = context.Humans
-                .Where(a => a.Animal.Any(a => a.AnimalSpecies == "dog"))
-                .Select(a => new {  a.HumanId, a.FirstName })
+                .Where(a => a.Animal.Any(a => a.AnimalSpecies == species))
+                .Select(a => new Human{  HumanId = a.HumanId, FirstName = a.FirstName })
                 .ToList();
                 
-            //have no clue how to convert it but I ran out of time
+            
             return animalSpecies;
         }
              
